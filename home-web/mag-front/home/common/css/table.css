@@ -1,0 +1,13 @@
+.table-list{
+    width:100%;
+    height: 100%;
+}
+.table-list table th {
+    line-height: 35px;
+}
+.table-list table td{
+    line-height: 60px;
+}
+.table-list table .td30 td{
+    line-height: 30px;
+}

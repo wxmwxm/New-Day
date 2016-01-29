@@ -1,0 +1,41 @@
+<div class="main_breadcrumb bg-c-2FA1A1">
+    <div class="c-255-255-255 fs-16 f-l lh-40 ml-20">
+        类型基本信息
+    </div>
+    <div class="p-6 f-r ">
+        <button type="button" class="btn btn-primary btn-sm ml-20 mr-20 w-100" ng-click="goback()"> 保 存 </button>
+        <button type="button" class="btn btn-default btn-sm ml-20" ng-click="goback()"> 返回 </button>
+    </div>
+</div>
+<div class="modal-body">
+    <form id="" method="post" class="form-horizontal" role="form">
+        <div class="min-h-350">
+            <div class="form-group form-detail">
+                <label>宝贝标题</label>
+                <div class="detail-info">
+                    <input type="text" class="form-control input-sm" ng-model="types.name" placeholder="宝贝标题">
+                </div>
+            </div>
+            <div class="form-group form-detail">
+                <label>宝贝卖点</label>
+                <div class="detail-info">
+                    <textarea class="form-control" rows="2" placeholder="宝贝卖点"></textarea>
+                </div>
+            </div>
+            <div class="form-group form-detail">
+                <label>类型</label>
+                <div class="detail-info">
+                </div>
+            </div>
+            <div class="form-group form-detail">
+                <label>品牌</label>
+                <div class="detail-info">
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-detail-foot">
+            <button type="button" class="btn btn-primary btn-sm ml-20 w-100 lh-30" ng-click=""> 保 存 </button>
+            <button type="button" class="btn btn-default btn-sm ml-20" ng-click="goback()"> 返回 </button>
+        </div>
+    </form>
+</div>

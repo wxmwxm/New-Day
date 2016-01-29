@@ -1,0 +1,37 @@
+{
+  "name": "mag-front",
+  "description": "后台管理页面",
+  "main": "index.html",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "authors": [
+    "Mr.Wu"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8",
+    "angular-ui-router": "ui-router#~0.2.15",
+    "angular-animate": "~1.4.8",
+    "angular-bootstrap": "~0.14.3",
+    "jquery-form": "~3.46.0",
+    "angular-ueditor": "*",
+    "ueditor-bower": "~1.4.3",
+    "angular-loader": "~1.4.8",
+    "spin.js": "~2.3.2",
+    "bootstrap-fileinput": "~4.2.8"
+  }
+}

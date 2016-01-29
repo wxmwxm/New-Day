@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>天天GO</title>
+
+    <!--- CSS --->
+    <link rel="stylesheet" href="/mag-front/home/login/css/style.css" type="text/css" />
+
+
+    <!--- Javascript libraries (jQuery and Selectivizr) used for the custom checkbox --->
+
+    <!--[if (gte IE 6)&(lte IE 8)]>
+    <!-- JQuery -->
+    <script type="text/javascript" src="/mag-front/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/mag-front/home/login/js/selectivizr.js"></script>
+    <noscript><link rel="stylesheet" href="/mag-front/home/login/css/fallback.css" /></noscript>
+    <![endif]-->
+    <script type="text/javascript" src="/mag-front/lib/jquery-form/jquery.form.js"></script>
+
+    <script type="text/javascript" src="/mag-front/home/login/js/login.js"></script>
+
+</head>
+
+<body>
+<div id="container">
+    <form id="dayLogin_form" action="/WebApp/loginJson.htm" method="post" onsubmit="return LoginSubmit();">
+        <div class="login">管理员登录</div>
+        <div class="username-text">用户名:</div>
+        <div class="password-text">密码:</div>
+        <div class="username-field">
+            <input type="text" name="tbManagers.code" value="wxm" />
+        </div>
+        <div class="password-field">
+            <input type="password" name="tbManagers.password" value="123" />
+        </div>
+        <input type="checkbox" name="remember-me" id="remember-me" /><label for="remember-me">记住用户</label>
+        <div class="forgot-usr-pwd">忘记<a href="#">用户名</a> 或 <a href="#">密码</a> ?</div>
+        <input type="submit" name="submit" value="GO" />
+    </form>
+</div>
+<div id="footer">
+    天天GO商城
+</div>
+</body>
+</html>

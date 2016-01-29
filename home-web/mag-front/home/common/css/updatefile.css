@@ -1,0 +1,18 @@
+.file-input .file-preview{
+    padding: 0px;
+}
+.file-input .file-drop-zone{
+    border:none;
+    margin: 3px 15px 3px 3px;
+    padding: 2px;
+ }
+.file-preview-frame{
+    margin: 0px 8px 0px 0px;
+}
+.file-input .file-drop-zone .file-preview-frame:first-child{
+    background-color:yellow;
+    border: 1px red solid;
+}
+.file-drop-zone-title{
+    padding: 55px 10px;
+}

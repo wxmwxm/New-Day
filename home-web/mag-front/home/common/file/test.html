@@ -1,0 +1,16 @@
+
+<div style="width: 500px;">
+
+<form enctype="multipart/form-data">
+    <label>Spanish Input</label>
+    <input id="file-es" name="file-es[]" type="file" multiple>
+    <button></button>
+</form>
+<script>
+    $('#file-es').fileinput({
+        language: 'es',
+        uploadUrl: '#',
+        allowedFileExtensions : ['jpg', 'png','gif'],
+    });
+</script>
+</div>

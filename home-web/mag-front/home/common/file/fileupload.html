@@ -1,0 +1,36 @@
+<!--$element.find('#goodsManagerUploadImageModal').modal('show');-->
+<div class="modal fade" id="goodsManagerUploadImageModal" tabindex="-1" role="dialog"
+     aria-labelledby="goodsManagerUploadLable" aria-hidden="true">
+    <div class="modal-dialog" style="width:500px;z-index: 9999;margin-top: 50px;">
+        <div class="modal-content">
+            <div class="modal-header" style="padding-bottom: 5px;padding-top: 5px;text-align: left;">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="goodsManagerUploadLable">
+                    图片上传
+                </h4>
+            </div>
+            <div class="modal-body uploadimage">
+                <form class="form-horizontal" role="form" action="/WebApp/home/file_File_uploadJSON.htm" method="post" enctype="multipart/form-data">
+                    <img/><br/><br/>
+                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                        <span class="fileupload-preview"></span>
+                        <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+
+                        <br/>
+                            <span class="btn btn-primary btn-file">
+                                <span class="fileupload-new">选择本地文件</span>
+                                <input type="file" name="file"/>
+                            </span>
+                    </div>
+
+                </form>
+            </div>
+            <!--<div class="modal-footer" align="center">
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+            </div>-->
+        </div>
+    </div>
+</div>

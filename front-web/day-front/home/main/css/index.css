@@ -1,0 +1,12 @@
+
+pre, blockquote, dl, figure, table, p, ul,li, ol, form,
+input, textarea, select, fieldset,
+h1, h2, h3, h4, h5, h6
+{
+    margin-bottom: 0px;
+}
+.container{
+    max-width: 1000px;
+    width: 1000px;
+    padding: 0px;
+}

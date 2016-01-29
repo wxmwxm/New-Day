@@ -1,0 +1,114 @@
+<div class="main_breadcrumb bg-c-2FA1A1">
+    <div class="c-255-255-255 fs-16 f-l lh-40 ml-20">
+        宝贝基本信息
+    </div>
+    <div class="p-6 f-r ">
+        <button type="button" class="btn btn-primary btn-sm ml-20 mr-20 w-100" ng-click="goback()"> 保 存 </button>
+        <button type="button" class="btn btn-default btn-sm ml-20" ng-click="goback()"> 返回 </button>
+    </div>
+</div>
+<div class="modal-body">
+    <form id="" method="post" class="form-horizontal" role="form">
+        <div class="form-group form-detail">
+            <label>宝贝标题</label>
+            <div class="detail-info">
+                <input type="text" class="form-control input-sm" ng-model="goods.name" placeholder="宝贝标题">
+            </div>
+        </div>
+        <div class="form-group form-detail">
+            <label>宝贝卖点</label>
+            <div class="detail-info">
+                <textarea class="form-control" rows="2" placeholder="宝贝卖点"></textarea>
+            </div>
+        </div>
+        <div class="form-group form-detail">
+            <label>类型</label>
+            <div class="detail-info">
+            </div>
+        </div>
+        <div class="form-group form-detail">
+            <label>品牌</label>
+            <div class="detail-info">
+            </div>
+        </div>
+        <div class="form-group form-detail">
+            <label>价格</label>
+            <div class="detail-info">
+                <input ng-model="goods.price" type="number" class="w-80 h-30 ta-r" min="0"/> .
+                <input ng-model="goods.price" type="number" class="w-50 h-30" min="0" max="99"/>
+            </div>
+        </div>
+        <div class="form-group form-detail">
+            <label>库存</label>
+            <div class="detail-info">
+                <input type="number" class="w-80 h-30 ta-c" min="0" ng-model="goods.stock" required>
+            </div>
+        </div>
+        <div class="form-group form-detail">
+            <label>宝贝属性</label>
+            <div class="detail-info-any bd-E9E9E9">
+                <div class="form-detail">
+                    <label>功效</label>
+                    <div class="detail-info">
+                        <input type="text" class="form-control input-sm" ng-model="goods.effect" placeholder="输入功效">
+                    </div>
+                </div>
+                <div class="form-detail">
+                    <label>规格</label>
+                    <div class="detail-info">
+                        <input type="text" class="form-control input-sm" ng-model="goods.spec" placeholder="输入规格">
+                    </div>
+                </div>
+                <div class="form-detail">
+                    <label>产地</label>
+                    <div class="detail-info">
+                        <input type="text" class="form-control input-sm" ng-model="goods.area" placeholder="输入产地">
+                    </div>
+                </div>
+                <div class="form-detail">
+                    <label>包装</label>
+                    <div class="detail-info">
+                        <input type="text" class="form-control input-sm" ng-model="goods.packing" placeholder="输入包装">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-detail">
+            <label>宝贝图片</label>
+            <div class="detail-info-any w-870">
+                <div class="row">
+                    <input id="file-Portrait1" name="files" type="file" multiple>
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-detail">
+            <label>宝贝描述</label>
+            <div class="detail-info-any p-0 ueditor" config="simpleConfig" ng-model="content">
+            </div>
+        </div>
+
+
+        <div class="form-group form-detail">
+            <button type="button" class="btn btn-primary btn-sm ml-20 mr-20 w-100 lh-30" ng-click=""> 保 存 </button>
+            <button type="button" class="btn btn-default btn-sm ml-20" ng-click="goback()"> 返回 </button>
+        </div>
+    </form>
+</div>
+<script>
+    $(function(){
+        $('#file-Portrait1').fileinput({
+            language: 'zh',
+            uploadUrl: '#',
+            allowedFileExtensions : ['jpg', 'png','gif'],
+            maxFileCount: 5,
+            enctype: 'multipart/form-data',
+            showUpload: true, //是否显示上传按钮
+            showCaption: false,//是否显示标题
+            browseClass: "btn btn-primary", //按钮样式
+            previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",
+            previewSettings:{
+                image: {width: "160px", height: "100px"}
+            }
+        });
+    });
+</script>

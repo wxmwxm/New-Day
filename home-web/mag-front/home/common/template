@@ -1,0 +1,6 @@
+
+<!--http-->
+ $http.post(url)
+                .success(function(data){})
+                .error(function(){})
+                .finally(function(){});

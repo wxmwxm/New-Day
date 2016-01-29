@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="base" extends="struts-default" abstract="true" namespace="/">
+		<interceptors>
+			<!-- 配置未登录进行操作的拦截器 -->
+			<interceptor name="loginInterceptor" class="common.interceptor.AuthorityInterceptor">
+				<param name="excludeName">execute,login,loginJson</param>
+          		<param name="sessionName">User</param>
+				<param name="generalScript">
+			 			<![CDATA[ 
+        					<script>
+        						alert("您还未登录，请先登录后再操作");
+        						window.top.location.href='{contextPath}'
+        					</script>
+       					]]>
+				</param>
+			</interceptor>
+			<!-- 重新封装一个默认的拦截器栈 -->
+			<interceptor-stack name="myDefaultStack">
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="loginInterceptor" />
+			</interceptor-stack>
+		</interceptors>
+		<!-- 为这个包设置默认的拦截器栈 -->
+	   <default-interceptor-ref name="myDefaultStack"></default-interceptor-ref>
+		<!-- 设置全局的返回值 -->
+		<global-results>
+			<result name="index">/index.jsp</result>
+		</global-results>
+	   <global-exception-mappings>
+          <exception-mapping result="actionError" exception="com.framework5.exception.ActionException"></exception-mapping>
+          <exception-mapping result="daoError" exception="com.framework5.exception.DataException"></exception-mapping>
+          <exception-mapping result="findingsError" exception="com.framework5.exception.FindingsException"></exception-mapping>               
+       </global-exception-mappings>
+	</package>
+	<package name="login" extends="base" namespace="/">
+       <action name="login" class="home.login.action.LoginAction" method="login">
+			<result name="success">/index.jsp</result>
+			<result type="redirect"  name="error">/index.jsp</result>
+       </action>
+		<action name="loginJson" class="home.login.action.LoginAction" method="loginJson">
+		</action>		
+	</package>
+
+	<package name="home" extends="base" namespace="/home">
+		<!-- 1:业务名称;2:模块名称;3:类名称;4:方法名称 -->
+		<action name="*_*_*JSON" class="home.{1}.action.{2}Action"
+			method="{3}">
+			<result name="json">/json.jsp</result>
+			
+			<interceptor-ref name="myDefaultStack"></interceptor-ref>
+		</action>
+	</package>
+	
+	<!-- 指定由spring负责action对象的创建 -->
+	<constant name="struts.objectFactory" value="spring" />
+	<!-- 所有匹配*.htm的请求都由struts2处理 -->
+	<constant name="struts.action.extension" value="htm" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<!-- 是否启用开发模式(开发时设置为true,发布到生产环境后设置为false) -->
+	<constant name="struts.devMode" value="true" />
+	<!-- struts配置文件改动后，是否重新加载(开发时设置为true,发布到生产环境后设置为false) -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+    <!-- 设置浏览器是否缓存静态内容,默认值为true(生产环境下使用),开发阶段最好关闭-->  
+	<constant name="struts.serve.static.browserCache" value="false" />
+	<!-- 请求参数的编码方式 -->
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<!-- 每次HTTP请求系统都重新加载资源文件，有助于开发(开发时设置为true,发布到生产环境后设置为false) -->
+	<constant name="struts.i18n.reload" value="true" />
+    <!-- 指定允许上传的文件最大字节数。默认值是2097152(2M)-->  
+    <constant name="struts.multipart.maxSize" value="10701096"/>  
+	<!-- 让struts2支持动态方法调用,使用叹号访问方法 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<!-- Action名称中是否还是用斜线 -->
+	<constant name="struts.enable.SlashesInActionNames" value="false" />
+	<!-- 允许标签中使用表达式语法 -->
+	<constant name="struts.tag.altSyntax" value="true" />
+	<!-- 对于WebLogic,Orion,OC4J此属性应该设置成true -->
+	<constant name="struts.dispatcher.parametersWorkaround" value="false" />
+</struts>

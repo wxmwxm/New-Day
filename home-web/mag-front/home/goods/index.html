@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="home/goods/css/goods.css">
+
+<div ng-controller="goodsManagerController" class="gooslist" style="width:100%;height: 100%;">
+    <!--<div ng-include="'/mag-front/home/common/file/test.html'"></div>-->
+    <nav ng-if="!opt" ng-include="'/mag-front/home/goods/list.html'"></nav>
+    <nav ng-if="opt" ng-include="'/mag-front/home/goods/info.html'"></nav>
+</div>

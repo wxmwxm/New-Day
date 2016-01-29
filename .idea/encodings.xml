@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/activity/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/activity/js/brandsManagerController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/brands/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/brands/js/brandsManagerController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/common/js/http-brands.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/common/js/http-factory.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/common/js/http-goods.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/common/js/http-system.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/common/js/http-types.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/common/js/jquery.plug.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/common/ng-modal" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/goods/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/goods/js/goodsManagerController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/types/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/home/types/js/typesManagerController.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/lib/angular-loading" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/home-web/mag-front/lib/ng-file-upload-master" charset="UTF-8" />
+  </component>
+</project>

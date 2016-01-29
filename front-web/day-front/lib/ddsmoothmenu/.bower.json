@@ -1,0 +1,30 @@
+{
+  "name": "ddsmoothmenu",
+  "main": "ddsmoothmenu.js",
+  "version": "2.0.1",
+  "homepage": "git@github.com:nsmith7989/ddsmoothmenu.git",
+  "authors": [
+    "dynamicdrive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11"
+  },
+  "_release": "2.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.1",
+    "commit": "26ea07790238022dfbf34233f7a91ab625df42c2"
+  },
+  "_source": "git://github.com/nsmith7989/ddsmoothmenu.git",
+  "_target": "~2.0.1",
+  "_originalSource": "ddsmoothmenu",
+  "_direct": true
+}

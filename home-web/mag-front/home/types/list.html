@@ -1,0 +1,51 @@
+<div class="main_breadcrumb p-6">
+    <div class="col-lg-6 ta-l">
+        <div class="input-group">
+        </div>
+    </div>
+    <div class="p-6 ta-r">
+        <button type="button" class="btn btn-default btn-sm" ng-click="updateInfo()">
+            <span class="glyphicon glyphicon-plus"></span>新增
+        </button>
+    </div>
+</div>
+<div class="min-h-350" dw-loading="goodsManagerLoading">
+    <table class="table_bor" ng-init="setPage(1)" >
+        <thead>
+        <tr class="up-active">
+            <th width="30">&nbsp;</th>
+            <th width="100px">类型</th>
+            <th width="150px">名称</th>
+            <th>详细说明</th>
+            <th width="120px">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="type in typesList" class="td30">
+                <td>{{$index + 1}}</td>
+                <td>{{type.aDicts.name}}</td>
+                <td>{{type.name}}</td>
+                <td>{{type.detailinfo}}</td>
+                <td>
+                    <a tooltip="修改" href="javascript:void(0);">
+                        <span class="up-icon up-icon-pencil" ng-click="updateInfo(type)"></span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="row">
+   <!-- <div class="col-md-2">
+        <select id="ttt" ng-change="onChange(pageSize)" ng-model="currentSize" class="form-control" title="每页条目数"
+                ng-options="pageSize for pageSize in [5, 10, 20, 100]">
+        </select>
+    </div>-->
+    <div class="col-md-9">
+        <pagination ng-change="setPage(currentPage)" total-items="totalItems" ng-model="currentPage"
+                    items-per-page="currentSize" max-size="maxSize"
+                    class="pagination-sm pull-left" boundary-links="true"  rotate="true" last-text="末页"
+                    first-text="首页" next-text="下一页" previous-text="上一页">
+        </pagination>
+    </div>
+</div>
